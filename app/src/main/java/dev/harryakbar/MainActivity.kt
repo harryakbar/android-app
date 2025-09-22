@@ -1,16 +1,12 @@
+
 package dev.harryakbar
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import dev.harryakbar.quran.Surah
+import dev.harryakbar.quran.SurahListScreen
 import dev.harryakbar.ui.theme.MyApplicationTheme
 
 class MainActivity : ComponentActivity() {
@@ -19,29 +15,15 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             MyApplicationTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+                val dummySurahs = listOf(
+                    Surah(1, "Al-Fatihah", "The Opening", "The Opening", 7, "Meccan"),
+                    Surah(2, "Al-Baqarah", "The Cow", "The Cow", 286, "Medinan"),
+                    Surah(3, "Ali 'Imran", "Family of Imran", "Family of Imran", 200, "Medinan"),
+                    Surah(4, "An-Nisa", "The Women", "The Women", 176, "Medinan"),
+                    Surah(5, "Al-Ma'idah", "The Table Spread", "The Table Spread", 120, "Medinan")
+                )
+                SurahListScreen(surahs = dummySurahs)
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    MyApplicationTheme {
-        Greeting("Android")
     }
 }
