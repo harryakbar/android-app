@@ -16,19 +16,25 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
 
 @Composable
-fun SurahListScreen(viewModel: SurahViewModel = viewModel()) {
+fun SurahListScreen(
+    modifier: Modifier = Modifier,
+    viewModel: SurahViewModel = viewModel()
+) {
     val uiState by viewModel.uiState.collectAsState()
     when (uiState) {
         is SurahUiState.Loading -> {
-            Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+            Box(modifier = modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                 CircularProgressIndicator()
             }
         }
         is SurahUiState.Success -> {
-            SurahList(surahs = (uiState as SurahUiState.Success).surahs)
+            SurahList(
+                surahs = (uiState as SurahUiState.Success).surahs,
+                modifier = modifier
+            )
         }
         is SurahUiState.Error -> {
-            Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+            Box(modifier = modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                 Text(text = "Error fetching data")
             }
         }
@@ -36,8 +42,11 @@ fun SurahListScreen(viewModel: SurahViewModel = viewModel()) {
 }
 
 @Composable
-fun SurahList(surahs: List<Surah>) {
-    LazyColumn {
+fun SurahList(
+    surahs: List<Surah>,
+    modifier: Modifier = Modifier
+) {
+    LazyColumn(modifier = modifier) {
         items(surahs) { surah ->
             Text(text = surah.nameSimple)
         }
