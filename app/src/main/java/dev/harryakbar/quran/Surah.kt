@@ -1,6 +1,9 @@
 
 package dev.harryakbar.quran
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class Surah(
     val number: Int,
     val name: String,

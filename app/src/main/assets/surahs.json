@@ -1,0 +1,42 @@
+[
+  {
+    "number": 1,
+    "name": "Al-Fatihah",
+    "englishName": "The Opening",
+    "englishNameTranslation": "The Opening",
+    "numberOfAyahs": 7,
+    "revelationType": "Meccan"
+  },
+  {
+    "number": 2,
+    "name": "Al-Baqarah",
+    "englishName": "The Cow",
+    "englishNameTranslation": "The Cow",
+    "numberOfAyahs": 286,
+    "revelationType": "Medinan"
+  },
+  {
+    "number": 3,
+    "name": "Ali 'Imran",
+    "englishName": "Family of Imran",
+    "englishNameTranslation": "Family of Imran",
+    "numberOfAyahs": 200,
+    "revelationType": "Medinan"
+  },
+  {
+    "number": 4,
+    "name": "An-Nisa",
+    "englishName": "The Women",
+    "englishNameTranslation": "The Women",
+    "numberOfAyahs": 176,
+    "revelationType": "Medinan"
+  },
+  {
+    "number": 5,
+    "name": "Al-Ma'idah",
+    "englishName": "The Table Spread",
+    "englishNameTranslation": "The Table Spread",
+    "numberOfAyahs": 120,
+    "revelationType": "Medinan"
+  }
+]
