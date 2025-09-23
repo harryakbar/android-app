@@ -17,7 +17,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import dev.harryakbar.pokemon.PokemonListScreen
+import dev.harryakbar.pokemon.PokemonNavHost
 import dev.harryakbar.quran.QuranNavHost
 
 @Composable
@@ -35,7 +35,7 @@ fun MainScreen() {
                 QuranNavHost()
             }
             composable(BottomNavItem.Pokemon.route) {
-                PokemonListScreen()
+                PokemonNavHost()
             }
         }
     }
