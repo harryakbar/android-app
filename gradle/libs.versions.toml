@@ -10,8 +10,10 @@ activityCompose = "1.8.0"
 composeBom = "2024.09.00"
 lifecycleViewmodelCompose = "2.9.3"
 kotlinxSerializationJson = "1.6.3"
+materialSymbols = "1.0.0-alpha01"
 
 [libraries]
+androidx-compose-material-symbols-outlined = { group = "androidx.compose.material", name = "material-symbols-outlined", version.ref = "materialSymbols" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
